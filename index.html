@@ -5,29 +5,26 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>GateGuard — Control Event & Visitor Access Without Stress</title>
 
-  <!-- Primary description -->
   <meta name="description" content="GateGuard helps event organizers, estates, and offices register guests, send instant WhatsApp passes, and control access with QR codes — no confusion, no gate drama." />
 
-  <!-- Canonical -->
   <link rel="canonical" href="https://yourgithubusername.github.io/gateguard/" />
 
-  <!-- Open Graph -->
   <meta property="og:site_name" content="GateGuard" />
   <meta property="og:title" content="GateGuard — A Simple System to Control Access Without Stress" />
-  <meta property="og:description" content="Register guests once. Send instant WhatsApp passes. Scan and verify at the gate. Trusted by event organizers and facilities teams." />
+  <meta property="og:description" content="Register guests once. Send instant WhatsApp passes. Scan and verify at the gate." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yourgithubusername.github.io/gateguard/" />
   <meta property="og:image" content="https://yourgithubusername.github.io/gateguard/preview.jpg" />
 
-  <!-- Theme -->
   <meta name="theme-color" content="#0f3d2e" />
 
   <style>
-    :root {
+    :root{
       --accent:#0f3d2e;
       --bg:#ffffff;
       --text:#111;
       --muted:#5f6368;
+      --soft:#f7faf9;
     }
     *{box-sizing:border-box;margin:0;padding:0}
     body{
@@ -37,36 +34,14 @@
       line-height:1.6;
       display:flex;
       justify-content:center;
-      align-items:flex-start;
       min-height:100vh;
     }
-    .wrap{
-      width:100%;
-      max-width:960px;
-      padding:20px;
-    }
-    header{
-      text-align:center;
-      margin-bottom:26px;
-    }
-    .brand{
-      font-weight:800;
-      font-size:1.4rem;
-      color:var(--accent);
-      letter-spacing:.3px;
-    }
-    .hook{
-      margin:14px auto 10px;
-      max-width:720px;
-      font-size:1.15rem;
-      font-weight:700;
-    }
-    .subhook{
-      color:var(--muted);
-      max-width:720px;
-      margin:0 auto 30px;
-      font-size:.95rem;
-    }
+    .wrap{width:100%;max-width:960px;padding:20px}
+    header{text-align:center;margin-bottom:26px}
+    .brand{font-weight:800;font-size:1.4rem;color:var(--accent)}
+    .hook{margin:14px auto 10px;max-width:720px;font-size:1.15rem;font-weight:700}
+    .subhook{color:var(--muted);max-width:720px;margin:0 auto 28px;font-size:.95rem}
+
     .card{
       border-radius:18px;
       overflow:hidden;
@@ -74,79 +49,97 @@
       border:1px solid rgba(15,20,25,.05);
       background:#fff;
     }
-    .hero{
-      width:100%;
-      display:block;
-      cursor:pointer;
-    }
-    .content{
-      padding:26px 22px 30px;
-      text-align:center;
-    }
-    h1{
-      font-size:1.2rem;
-      color:var(--accent);
-      margin-bottom:12px;
-      font-weight:800;
-    }
-    .value{
-      color:var(--muted);
-      font-size:.95rem;
+    .hero{width:100%;display:block;cursor:pointer}
+    .content{padding:26px 22px 30px;text-align:center}
+
+    h1{font-size:1.2rem;color:var(--accent);margin-bottom:12px;font-weight:800}
+    .value{color:var(--muted);font-size:.95rem;margin-bottom:20px;max-width:700px;margin-inline:auto}
+
+    .flow{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      font-size:.9rem;
+      color:#333;
       margin-bottom:22px;
-      max-width:700px;
-      margin-left:auto;
-      margin-right:auto;
+      flex-wrap:wrap;
     }
+    .flow span{background:var(--soft);padding:8px 12px;border-radius:10px}
+
     .points{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
       gap:14px;
-      margin-bottom:26px;
+      margin-bottom:24px;
     }
     .point{
-      background:#f7faf9;
+      background:var(--soft);
       border:1px solid rgba(15,61,46,.08);
       border-radius:12px;
       padding:14px;
       font-size:.9rem;
-      color:#333;
     }
+
     .testimonial{
       background:#f9fafc;
       border-left:4px solid var(--accent);
       padding:14px 18px;
-      margin:20px auto;
+      margin:18px auto;
       border-radius:6px;
       font-size:.9rem;
       color:var(--muted);
       max-width:720px;
       text-align:left;
     }
-    .cta{
-      display:inline-block;
-      background:var(--accent);
-      color:#fff;
-      padding:15px 26px;
-      border-radius:14px;
-      text-decoration:none;
-      font-weight:700;
-      font-size:.95rem;
+
+    .divider{
+      margin:26px auto;
+      max-width:720px;
+      border-top:1px dashed rgba(0,0,0,.1);
+    }
+
+    .who{
+      font-size:.9rem;
+      color:#333;
+      max-width:720px;
+      margin:0 auto 22px;
+      text-align:left;
+    }
+
+    .cta-box{
+      background:var(--soft);
+      border:1px solid rgba(15,61,46,.1);
+      border-radius:16px;
+      padding:22px;
       margin-top:10px;
     }
-    .cta:hover{opacity:.9}
-    .cta-note{
+
+    .cta{
+      display:block;
+      background:var(--accent);
+      color:#fff;
+      padding:16px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:800;
+      font-size:.95rem;
+      margin-top:6px;
+    }
+
+    .cta-sub{
       font-size:.85rem;
       color:var(--muted);
       margin-top:10px;
     }
+
     footer{
       text-align:center;
       color:var(--muted);
       font-size:.85rem;
-      margin-top:32px;
+      margin-top:34px;
     }
+
     @media(max-width:600px){
-      .cta{width:100%}
       .testimonial{text-align:center}
     }
   </style>
@@ -155,64 +148,76 @@
 <body>
 <main class="wrap">
 
-  <!-- 1️⃣ HOOK -->
-  <header>
-    <div class="brand">GateGuard</div>
-    <div class="hook">
-      A simple 3-step system used to control guest access — without gate arguments or manual lists
+<header>
+  <div class="brand">GateGuard</div>
+  <div class="hook">
+    A simple 3-step system used to control guest access — without gate arguments or manual lists
+  </div>
+  <div class="subhook">
+    Built for events, estates, offices, churches, and private facilities that want clean access control.
+  </div>
+</header>
+
+<article class="card">
+
+  <img class="hero" src="preview.jpg" alt="GateGuard QR access verification"
+    onclick="window.open('https://shorturl.at/YqJAp','_blank')" />
+
+  <div class="content">
+
+    <h1>Register Once. Verify Instantly. Control Entry Confidently.</h1>
+    <p class="value">
+      Guests register once and receive a verified WhatsApp access pass.
+      At the gate, security scans and confirms entry in seconds.
+    </p>
+
+    <!-- Visual certainty -->
+    <div class="flow">
+      <span>Guest Registers</span> →
+      <span>WhatsApp Pass Sent</span> →
+      <span>QR Scanned at Gate</span>
     </div>
-    <div class="subhook">
-      Built for events, estates, offices, churches, and private facilities that want clean access control.
+
+    <div class="points">
+      <div class="point"><strong>Do this:</strong><br>Share one simple registration form</div>
+      <div class="point"><strong>Get this:</strong><br>Verified WhatsApp + email passes</div>
+      <div class="point"><strong>Result:</strong><br>Fast, controlled gate entry</div>
     </div>
-  </header>
 
-  <article class="card">
+    <div class="testimonial">
+      <em>“We verified over 1,200 guests without a single argument at the gate.”</em><br>
+      — Event Organizer, Lagos
+    </div>
 
-    <img class="hero"
-      src="preview.jpg"
-      alt="GateGuard QR access verification"
-      onclick="window.open('https://shorturl.at/YqJAp','_blank')" />
+    <div class="testimonial">
+      <em>“Security just scans and lets verified guests in.”</em><br>
+      — Estate Facility Manager
+    </div>
 
-    <div class="content">
+    <div class="divider"></div>
 
-      <!-- 2️⃣ VALUE PROPOSITION -->
-      <h1>Register Once. Verify Instantly. Control Entry Confidently.</h1>
-      <p class="value">
-        When guests register with GateGuard, they receive a verified WhatsApp pass with a QR code.
-        At the gate, staff scan and confirm entry in seconds — no paper lists, no confusion.
-      </p>
+    <!-- Decision clarity -->
+    <div class="who">
+      <strong>This is for:</strong> events, estates, offices, churches, and facilities with gate control.<br>
+      <strong>This is not for:</strong> locations that don’t need verification or want paper lists.
+    </div>
 
-      <div class="points">
-        <div class="point"><strong>Do this:</strong><br>Register guests using a simple form</div>
-        <div class="point"><strong>Get this:</strong><br>Instant WhatsApp + email access pass</div>
-        <div class="point"><strong>Here’s how:</strong><br>QR verification at the gate</div>
-      </div>
-
-      <!-- 3️⃣ CREDIBILITY -->
-      <div class="testimonial">
-        <em>“We verified over 1,200 guests at our event without a single argument at the gate.”</em><br>
-        — Event Organizer, Lagos
-      </div>
-
-      <div class="testimonial">
-        <em>“Security just scans and lets verified guests in. Simple.”</em><br>
-        — Estate Facility Manager
-      </div>
-
-      <!-- 4️⃣ CTA -->
+    <!-- CTA with full objection handling -->
+    <div class="cta-box">
       <a class="cta" href="https://shorturl.at/YqJAp" target="_blank" rel="noopener">
         Start Guest Registration Now
       </a>
-      <div class="cta-note">
-        Free to try • Takes less than 2 minutes • No technical setup
+      <div class="cta-sub">
+        No login required • No card needed • Works on any phone • Set up in under 2 minutes
       </div>
-
     </div>
-  </article>
 
-  <footer>
-    © <span id="year"></span> GateGuard. Access control made simple.
-  </footer>
+  </div>
+</article>
+
+<footer>
+  © <span id="year"></span> GateGuard. Powered by <strong>Fantastic Skills</strong>.
+</footer>
 
 </main>
 
